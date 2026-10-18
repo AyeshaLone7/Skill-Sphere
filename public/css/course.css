@@ -1,0 +1,283 @@
+
+:root {
+    --primary: #059669; /* Rich Emerald Green */
+    --primary-hover: #047857;
+    --primary-light: #8dad9e;
+    --accent-gradient: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+    --bg-color: #f9faf9; /* Warm off-white */
+    --card-bg: #ffffff;
+    --text-main: #1c1917; /* Rich charcoal */
+    --text-muted: #78716c;
+    --border-color: #d7d3cb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling effect for anchor links */
+}
+
+/* Navbar */
+nav {
+    background:#dfdfd6 ;
+    padding: 22px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 40px;
+}
+
+nav h2 {
+    background: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0;
+}
+
+nav h3 {
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    background: #059669;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 90px 20px 70px;
+    background: linear-gradient(180deg, #ffffff 0%, #ababa1 100%);
+
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1c1917;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero span {
+    background: var(--accent-gradient);
+        background-clip: text;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero button {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.25);
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(5, 150, 105, 0.35);
+}
+
+/* Courses Section */
+.courses {
+    padding: 80px 10%;
+}
+
+.courses > h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 45px;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.course {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(215, 211, 203, 0.6);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(5, 150, 105, 0.08);
+    border-color: #a7f3d0;
+}
+
+.course h3 {
+    font-size: 20px;
+    color: #1c1917;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.course p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.course a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+}
+
+.course a:hover {
+    gap: 10px;
+}
+
+/* Registration Form Section */
+.register-section {
+    background: linear-gradient(180deg, #f5f5f4 0%, #6f6f6f 100%);
+    padding: 90px 20px;
+}
+
+.form-card {
+    max-width: 540px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.form-card h2 {
+    color: #1c1917;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.form-card > p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+/* Success Message Styled Box */
+.success-alert {
+    background: #ecfdf5;
+    border: 1.5px solid #059669;
+    color: #065f46;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #44403c;
+    margin-bottom: 8px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    box-sizing: border-box;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 15px;
+    background: #fafaf9;
+    transition: all 0.3s ease;
+    color: #1c1917;
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.12);
+}
+
+form button[type="submit"] {
+    width: 100%;
+    background: var(--accent-gradient);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.25);
+    transition: all 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(5, 150, 105, 0.35);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    nav { padding: 15px 5%; }
+    .courses { padding: 50px 5%; }
+    .form-card { padding: 25px; }
+}
+.gap40{
+    height:40px;
+}
+.gap5{
+    height:5px;
+}
